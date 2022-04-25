@@ -415,29 +415,25 @@ const Language = () => {
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Courses</h5>
+              <h5 class="text-uppercase mb-0">&nbsp;</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="/Python" style={{ color: "white" }}>
-                    Python
+                  <a href="/javascript?topic=nextjs" style={{ color: "white" }}>
+                    Nextjs
                   </a>
                 </li>
                 <li>
-                  <a href="/javascript" style={{ color: "white" }}>
-                    javascript
+                  <a href="/c++?topic=algorithms" style={{ color: "white" }}>
+                    algorithms
                   </a>
                 </li>
                 <li>
-                  <a href="/go" style={{ color: "white" }}>
-                    Go
+                  <a href="/javascript?topic=api" style={{ color: "white" }}>
+                    api
                   </a>
                 </li>
-                <li>
-                  <a href="/rust" style={{ color: "white" }}>
-                    Rust
-                  </a>
-                </li>
+                
               </ul>
             </div>
           </div>

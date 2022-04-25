@@ -209,34 +209,13 @@ const Home = () => {
                   src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
                 />
                 <Card.Body>
-                  <Card.Title>Card title</Card.Title>
+                  <Card.Title>Advanced Python Programming - 2022</Card.Title>
                   <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Improve your Python programming skills and solve over 100 advanced Python problems!
                   </Card.Text>
+                  <Link href="https://www.udemy.com/course/advanced-exercises-python-programming/">View more</Link>
                   <Card.Text>
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <Card>
-                <Card.Img
-                  variant="top"
-                  src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
-                />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </Card.Text>
-                  <Card.Text>
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <small class="text-muted">4/2022</small>
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -249,14 +228,34 @@ const Home = () => {
                   src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
                 />
                 <Card.Body>
-                  <Card.Title>Card title</Card.Title>
+                  <Card.Title>Advanced C Programming Course</Card.Title>
                   <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                  Become a True Master of the C Programming Language - Confidently Apply for Real Time or Embedded C Jobs or contracts!
                   </Card.Text>
+                  <Link href="https://www.udemy.com/course/advanced-c-programming-course/">View more</Link>
                   <Card.Text>
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <small class="text-muted">8/2021</small>
+                  </Card.Text>
+
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <Card>
+                <Card.Img
+                  variant="top"
+                  src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
+                />
+                <Card.Body>
+                  <Card.Title>Deep Learning Specialization
+</Card.Title>
+                  <Card.Text>
+                  Become a Machine Learning expert. Master the fundamentals of deep learning and break into AI. Recently updated with cutting-edge techniques!
+                  </Card.Text>
+                  <Link href="https://www.coursera.org/professional-certificates/tensorflow-in-practice">View more</Link>
+                  <Card.Text>
+                    <small class="text-muted">3/2022</small>
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -269,14 +268,13 @@ const Home = () => {
                   src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
                 />
                 <Card.Body>
-                  <Card.Title>Card title</Card.Title>
+                  <Card.Title>DeepLearning.AI TensorFlow Developer Professional Certificate</Card.Title>
                   <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                  Best practices for TensorFlow, a popular open-source machine learning framework to train a neural network for a computer vision applications.
                   </Card.Text>
+                  <Link href="https://www.coursera.org/specializations/deep-learning">View more</Link>
                   <Card.Text>
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <small class="text-muted">3/2022</small>
                   </Card.Text>
                 </Card.Body>
               </Card>
