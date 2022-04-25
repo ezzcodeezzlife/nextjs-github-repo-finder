@@ -87,11 +87,7 @@ const Language = () => {
 
           <div class="collapse navbar-collapse" id="navbarsExample01">
             <ul class="navbar-nav me-auto mb-2">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
+             
 
               <li class="nav-item dropdown">
                 <a
@@ -104,7 +100,7 @@ const Language = () => {
                   All anguages
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                  <li>
+                <li>
                     <a class="dropdown-item" href="/python">
                       Python
                     </a>
@@ -115,8 +111,28 @@ const Language = () => {
                     </a>
                   </li>
                   <li>
+                    <a class="dropdown-item" href="/Javascript">
+                      Javascript
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Rust">
+                      Rust
+                    </a>
+                  </li>
+                  <li>
                     <a class="dropdown-item" href="/go">
                       Go
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/C++">
+                      C++
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Php">
+                      Php
                     </a>
                   </li>
                 </ul>

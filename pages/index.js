@@ -56,11 +56,7 @@ const Home = () => {
 
           <div class="collapse navbar-collapse" id="navbarsExample01">
             <ul class="navbar-nav me-auto mb-2">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
+              
 
               <li class="nav-item dropdown">
                 <a
@@ -84,8 +80,28 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
+                    <a class="dropdown-item" href="/Javascript">
+                      Javascript
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Rust">
+                      Rust
+                    </a>
+                  </li>
+                  <li>
                     <a class="dropdown-item" href="/go">
                       Go
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/C++">
+                      C++
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Php">
+                      Php
                     </a>
                   </li>
                 </ul>
@@ -99,7 +115,7 @@ const Home = () => {
         class="p-5 text-center bg-image rounded-3"
         style={{
           backgroundImage: `URL('https://i.pinimg.com/originals/b7/4b/fb/b74bfb590ea735f8c3ec9b64f8309273.jpg')`,
-          height: "400px",
+          height: "600px",
         }}
       >
         <div class="mask">
