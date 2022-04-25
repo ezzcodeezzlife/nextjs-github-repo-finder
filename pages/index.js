@@ -199,18 +199,18 @@ const Home = () => {
         </div>
       )}
       <>
-        {/* Create two responsice cards next to each other */}
-        <div class="container">
-          <div class="row">
+        {/* Create responsice 2 x 2 grid */}
+        <div class="container" style={{marginTop:"20px"}}>
+          <div class="row" >
             <div class="col-sm-6 col-md-4 col-lg-3">
               <Card>
-                <Card.Img variant="top" src="https://i.imgur.com/XqQXZ8l.jpg" />
+                <Card.Img variant="top" src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg" />
                 <Card.Body>
                   <Card.Title>Card title</Card.Title>
                   <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    This is a wider card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
                   </Card.Text>
                   <Card.Text>
                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -218,15 +218,51 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </div>
+
             <div class="col-sm-6 col-md-4 col-lg-3">
               <Card>
-                <Card.Img variant="top" src="https://i.imgur.com/XqQXZ8l.jpg" />
+                <Card.Img variant="top" src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg" />
                 <Card.Body>
                   <Card.Title>Card title</Card.Title>
                   <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    This is a wider card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </Card.Text>
+                  <Card.Text>
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <Card>
+                <Card.Img variant="top" src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg" />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </Card.Text>
+                  <Card.Text>
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <Card>
+                <Card.Img variant="top" src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg" />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
                   </Card.Text>
                   <Card.Text>
                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -236,6 +272,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        
       </>
 
       <footer
@@ -272,81 +309,77 @@ const Home = () => {
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Links</h5>
+              <h5 class="text-uppercase mb-0">&nbsp;</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/Php" style={{ color: "white" }}>
+                    Php
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/Java" style={{ color: "white" }}>
+                    Java
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/Rust" style={{ color: "white" }}>
+                    Rust
+                  </a>
+                </li>
+               
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Topics</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="/javascript?topic=npm" style={{ color: "white" }}>
+                    npm
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/python?topic=pandas" style={{ color: "white" }}>
+                    pandas
+                  </a>
+                </li>
+                <li>
+                  <a href="/javascript?topic=react" style={{ color: "white" }}>
+                    React
+                  </a>
+                </li>
+                <li>
+                  <a href="/javascript?topic=node" style={{ color: "white" }}>
+                    node
                   </a>
                 </li>
               </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
+              <h5 class="text-uppercase mb-0">Courses:</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/Python" style={{ color: "white" }}>
+                    Python
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/javascript" style={{ color: "white" }}>
+                    javascript
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/go" style={{ color: "white" }}>
+                    Go
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Links</h5>
-
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/rust" style={{ color: "white" }}>
+                    Rust
                   </a>
                 </li>
               </ul>
