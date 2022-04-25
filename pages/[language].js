@@ -31,7 +31,7 @@ const Language = () => {
     fetch(
       "https://api.github.com/search/repositories?q=" +
         String(language) +
-        "&sort=stars&order=desc&per_page=3" /// + topic
+        "&sort=stars&order=desc&per_page=4" /// + topic
     )
       .then((response) => {
         return response.json();
@@ -51,14 +51,14 @@ const Language = () => {
 
   return (
     <>
-      <div>
+      
         <nav
           class="navbar navbar-dark bg-dark"
           aria-label="First navbar example"
         >
           <div class="container-fluid">
             <a class="navbar-brand" href="/">
-              Never expand
+              Repofy
             </a>
             <button
               class="navbar-toggler"
@@ -117,16 +117,23 @@ const Language = () => {
           </div>
         </nav>
 
+
+      <div class="container" id="content" style={{paddingTop: "2vh"}}>
         {name ? (
           <div class="jumbotron">
             <h1 class="display-4">Hello, {name}!</h1>
             <p class="lead">
-              We found your repo <b>{reponame}</b> and it looks really great!
+              We found your reposeto <b>{reponame} </b> and it looks really interesting.
             </p>
+            <p class="lead">Because you like the topic <b>{topic}</b> you should have a look at this:</p>
             <hr class="my-4"></hr>
-            <p>Because i like the topic {topic} you maybe like this:</p>
+            
+
+            
+
+
             <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#projects" role="button">
+              <a class="btn btn-primary btn-lg" href="#content" role="button">
                 See more
               </a>
             </p>
@@ -135,63 +142,175 @@ const Language = () => {
           <></>
         )}
 
-        
-
-
       
-          {loading ? (
-            <p>Loading...</p>
-          ) : (
+
+
+
+
+
+
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          repos.map((repo) => (
             
-            repos.map((repo) => (
-              <Card>
-                  <Card.Body>
-                    <Card.Title> {repo.name}</Card.Title>
-                    <Card.Text>
-                     {repo.description}
-                    </Card.Text>
-                    <Button
-                      id="homepagebutton"
-                      href={repo.html_url}
-                      variant="primary"
-                    >
-                      <GoMarkGithub></GoMarkGithub> GitHub
-                    </Button>{" "}
-                    <Button
-                      id="homepagebutton"
-                      href={repo.homepage}
-                      variant="secondary"
-                    >
-                      <GoGlobe></GoGlobe> Homepage
-                    </Button>
-                  </Card.Body>
-                  <Card.Header>
-                    <Badge bg="secondary"> ⭐ {repo.stargazers_count}</Badge> ▪️{" "}
-                    <Badge bg="secondary"> 🍴 {repo.forks_count}</Badge> ▪️{" "}
-                    <Badge bg="info">{repo.language}</Badge>
-                  </Card.Header>
-                </Card>
-            )
-            )
-          
+            <div class="card" style={{marginTop: "1vw"}}>
+            <Card>
+              <Card.Body>
+                <Card.Title> {repo.name}</Card.Title>
+                <Card.Text>{repo.description}</Card.Text>
+                <Button
+                  id="homepagebutton"
+                  href={repo.html_url}
+                  variant="primary"
+                >
+                  <GoMarkGithub></GoMarkGithub> GitHub
+                </Button>{" "}
+                <Button
+                  id="homepagebutton"
+                  href={repo.homepage}
+                  variant="secondary"
+                >
+                  <GoGlobe></GoGlobe> Homepage
+                </Button>
+              </Card.Body>
+              <Card.Header>
+                <Badge bg="secondary"> ⭐ {repo.stargazers_count}</Badge> ▪️{" "}
+                <Badge bg="info">{repo.language}</Badge>
+              </Card.Header>
+            </Card>
+          </div>
 
           
-          )}
+          ))
+        )}
 
 
-      
-            <form action= {"/" + language}>
-            <button className="btn btn-outline-primary" type="submit">More {language} projects</button>
-          </form>
+        <center>
+        <div style={{paddingTop: "2vh"}}>
+        <form action={"/" + language}>
+          <button className="btn btn-outline-primary" type="submit">
+            See more {language} projects
+          </button>
+        </form>
+        </div>
+        </center> 
+       
+       
+       
+        <div class="card text-center" style={{marginTop: "2vh"}}>
+          <div class="card-header">
+            Featured
+          </div>
+          <a href={"https://de.coursera.org/search?query=" + language}>
+          <div class="card-body">
+            <h5 class="card-title">Check out these courses for: {language}{" "}</h5>
+            <p class="card-text">Many of them cover the topic "{topic}"!</p>
+            <a class="btn btn-primary">Go somewhere</a>
+          </div>
+          </a>
+          <div class="card-footer text-muted">
+            2 days ago
+          </div>
+        </div>
 
 
-          <h1>
-            <a href={"https://de.coursera.org/search?query=" + language}>
-              Check out these courses for: {language}{" "}
-            </a>
-          </h1>
-        
+        <footer class="bg-light text-center text-lg-start">
+
+  <div class="container p-4">
+   
+    <div class="row">
+     
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-dark">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 4</a>
+          </li>
+        </ul>
       </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-0">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-dark">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 4</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-dark">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 4</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-0">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-dark">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Link 4</a>
+          </li>
+        </ul>
+      </div>
+  
+    </div>
+
+  </div>
+
+
+
+  <div class="text-center p-3">
+    © 2020 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+ 
+</footer>
+
+     </div>
     </>
   );
 };
