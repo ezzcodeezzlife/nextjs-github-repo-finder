@@ -178,11 +178,13 @@ const Language = () => {
           
           )}
 
-<h1>
-            <a href={"/" + language}>
-              See more: {language} projects{" "}
-            </a>
-          </h1>
+
+      
+            <form action= {"/" + language}>
+            <button className="btn btn-outline-primary" type="submit">More {language} projects</button>
+          </form>
+
+
           <h1>
             <a href={"https://de.coursera.org/search?query=" + language}>
               Check out these courses for: {language}{" "}
