@@ -56,8 +56,6 @@ const Home = () => {
 
           <div class="collapse navbar-collapse" id="navbarsExample01">
             <ul class="navbar-nav me-auto mb-2">
-              
-
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -114,19 +112,33 @@ const Home = () => {
       <div
         class="p-5 text-center bg-image rounded-3"
         style={{
-          backgroundImage: `URL('https://i.pinimg.com/originals/b7/4b/fb/b74bfb590ea735f8c3ec9b64f8309273.jpg')`,
+          backgroundImage: `URL('https://i.pinimg.com/originals/53/2e/a0/532ea090207b42fbd4c25e99fe3f0526.jpg')`,
           height: "600px",
         }}
       >
         <div class="mask">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-              <br></br>
-              <h1 class="mb-3">Heading</h1>
-              <h4 class="mb-3">Subheading</h4>
-              <a class="btn btn-light btn-lg" href="#!" role="button">
-                Call to action
-              </a>
+              <div class="jumbotron">
+                <h1 class="display-4">Welcome!</h1>
+                <p class="lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p class="lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                </p>
+                <hr class="my-4"></hr>
+
+                <p class="lead">
+                  <a
+                    class="btn btn-outline-primary btn-lg"
+                    href="#content"
+                    role="button"
+                  >
+                    See more
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -170,14 +182,14 @@ const Home = () => {
                     <Link href={repo.html_url}>
                       <Button variant="primary">
                         <GoMarkGithub />
-                        Github
+                                  {" "} Github
                       </Button>
                     </Link>
 
                     <Link href={repo.homepage}>
                       <Button variant="secondary" style={{ marginLeft: "5px" }}>
                         <GoGlobe />
-                        Website
+                        {" "} Website
                       </Button>
                     </Link>
                   </Card.Body>

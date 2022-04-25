@@ -32,7 +32,7 @@ const Language = () => {
       fetch(
         "https://api.github.com/search/repositories?q=" +
           String(language) +
-          "&sort=stars&order=desc&per_page=4" /// + topic
+          "&sort=stars&order=desc&per_page=5" /// + topic
       )
         .then((response) => {
           return response.json();
@@ -47,7 +47,7 @@ const Language = () => {
           String(language) +
           " " +
           String(topic) +
-          "&sort=stars&order=desc&per_page=8" /// + topic
+          "&sort=stars&order=desc&per_page=5" /// + topic
       )
         .then((response) => {
           return response.json();
@@ -87,8 +87,6 @@ const Language = () => {
 
           <div class="collapse navbar-collapse" id="navbarsExample01">
             <ul class="navbar-nav me-auto mb-2">
-             
-
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -100,7 +98,7 @@ const Language = () => {
                   All anguages
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                <li>
+                  <li>
                     <a class="dropdown-item" href="/python">
                       Python
                     </a>
