@@ -120,13 +120,12 @@ const Home = () => {
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
               <div class="jumbotron">
-                <h1 class="display-4">Welcome!</h1>
+                <br>
+                </br>
+                <br></br>
+                <h1 class="display-4">Welcome to Repofy!</h1>
                 <p class="lead">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <p class="lead">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit.
+                We at Repofy care about quality education. Not every school and university can teach in a way that is both fun and engaging.<br></br> Fortunately here you can find hundreds of Courses, Consultants and Products to help you learn about your favorite topics in an unforgettable way!
                 </p>
                 <hr class="my-4"></hr>
 
@@ -144,7 +143,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
+
       <div id="content"></div>
       {loading ? (
         <Spinner animation="border" variant="primary" />
@@ -180,8 +179,6 @@ const Home = () => {
                     ) : (
                       <></>
                     )}
-
-                   
 
                     <Link href={repo.html_url}>
                       <Button variant="primary">
@@ -371,29 +368,25 @@ const Home = () => {
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Courses</h5>
+              <h5 class="text-uppercase mb-0">&nbsp;</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="/Python" style={{ color: "white" }}>
-                    Python
+                  <a href="/javascript?topic=nextjs" style={{ color: "white" }}>
+                    Nextjs
                   </a>
                 </li>
                 <li>
-                  <a href="/javascript" style={{ color: "white" }}>
-                    javascript
+                  <a href="/c++?topic=algorithms" style={{ color: "white" }}>
+                    algorithms
                   </a>
                 </li>
                 <li>
-                  <a href="/go" style={{ color: "white" }}>
-                    Go
+                  <a href="/javascript?topic=api" style={{ color: "white" }}>
+                    api
                   </a>
                 </li>
-                <li>
-                  <a href="/rust" style={{ color: "white" }}>
-                    Rust
-                  </a>
-                </li>
+                
               </ul>
             </div>
           </div>

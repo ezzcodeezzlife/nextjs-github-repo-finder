@@ -205,31 +205,25 @@ const Language = () => {
                         <></>
                       )}
 
-
-                    {repo.topics ? (
-                      <>
-                        {repo.topics.map((topic) => (
-                          <a href={"/" + language + "?topic=" + topic}>
-                            <button
-                              className="btn btn-outline-secondary btn-sm"
-                              type="submit"
-                              style={{ margin: "1px" }}
-                            >
-                              {topic} 
-                            </button>
-                          </a>
-                        ))}
-                        <br></br>
-                        <br></br>
-                      </>
-                    ) : (
-                      <></>
-                    )}
-
-
-
-
-
+                      {repo.topics ? (
+                        <>
+                          {repo.topics.map((topic) => (
+                            <a href={"/" + language + "?topic=" + topic}>
+                              <button
+                                className="btn btn-outline-secondary btn-sm"
+                                type="submit"
+                                style={{ margin: "1px" }}
+                              >
+                                {topic}
+                              </button>
+                            </a>
+                          ))}
+                          <br></br>
+                          <br></br>
+                        </>
+                      ) : (
+                        <></>
+                      )}
 
                       <Link href={repo.html_url}>
                         <Button variant="primary">
@@ -274,67 +268,63 @@ const Language = () => {
         <>
           {/* create two cards which to gether span full width*/}
           <div class="row">
-            
             <div class="col-sm-6">
               <div class="card" style={{ marginTop: "1vw" }}>
-              <a style={{"textDecoration": "none"}} 
-                          href={
-                            "https://de.coursera.org/search?query=" + language
-                          }
-                        >
-                <Card>
-                  <Card.Body>
-                    <img
-                      class="card-img-top"
-                      src="https://images.pexels.com/photos/247791/pexels-photo-247791.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                      alt="Card image cap"
-                    ></img>
-                    <Card.Title>
-                      <br></br>
-                       Cousera Courses
-                    </Card.Title>
-                    <Card.Text>
-                      <p>
-                        Check out the great courses on cousera.com. Many of them in the language you are interested in. 
-                        
-                          
-                      
-                      </p>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href={"https://de.coursera.org/search?query=" + language}
+                >
+                  <Card>
+                    <Card.Body>
+                      <img
+                        class="card-img-top"
+                        src="https://images.pexels.com/photos/247791/pexels-photo-247791.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="Card image cap"
+                      ></img>
+                      <Card.Title>
+                        <br></br>
+                        Cousera Courses
+                      </Card.Title>
+                      <Card.Text>
+                        <p>
+                          Check out the great courses on cousera.com. Many of
+                          them in the language you are interested in.
+                        </p>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
                 </a>
               </div>
             </div>
-            
+
             <div class="col-sm-6">
               <div class="card" style={{ marginTop: "1vw" }}>
-              <a style={{"textDecoration": "none"}} 
-                          href={
-                            "https://www.udemy.com/courses/search/?src=ukw&q=" + language
-                          }
-                        >
-                <Card>
-                  <Card.Body>
-                    <img
-                      class="card-img-top"
-                      src="https://images.pexels.com/photos/247791/pexels-photo-247791.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                      alt="Card image cap"
-                    ></img>
-                    <Card.Title>
-                      <br></br>
-                       Udemy Courses
-                    </Card.Title>
-                    <Card.Text>
-                      <p>
-                        Check out the great courses on Udemy.com. Many of them in the language you are interested in. 
-                        
-                          
-                      
-                      </p>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href={
+                    "https://www.udemy.com/courses/search/?src=ukw&q=" +
+                    language
+                  }
+                >
+                  <Card>
+                    <Card.Body>
+                      <img
+                        class="card-img-top"
+                        src="https://images.pexels.com/photos/247791/pexels-photo-247791.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="Card image cap"
+                      ></img>
+                      <Card.Title>
+                        <br></br>
+                        Udemy Courses
+                      </Card.Title>
+                      <Card.Text>
+                        <p>
+                          Check out the great courses on Udemy.com. Many of them
+                          in the language you are interested in.
+                        </p>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
                 </a>
               </div>
             </div>
@@ -461,6 +451,5 @@ const Language = () => {
     </>
   );
 };
-
 
 export default Language;
