@@ -205,6 +205,32 @@ const Language = () => {
                         <></>
                       )}
 
+
+                    {repo.topics ? (
+                      <>
+                        {repo.topics.map((topic) => (
+                          <a href={"/" + language + "?topic=" + topic}>
+                            <button
+                              className="btn btn-outline-secondary btn-sm"
+                              type="submit"
+                              style={{ margin: "1px" }}
+                            >
+                              {topic} 
+                            </button>
+                          </a>
+                        ))}
+                        <br></br>
+                        <br></br>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+
+
+
+
+
+
                       <Link href={repo.html_url}>
                         <Button variant="primary">
                           <GoMarkGithub /> Github
@@ -248,57 +274,68 @@ const Language = () => {
         <>
           {/* create two cards which to gether span full width*/}
           <div class="row">
+            
             <div class="col-sm-6">
               <div class="card" style={{ marginTop: "1vw" }}>
-                <Card>
-                  <Card.Body>
-                    <img
-                      class="card-img-top"
-                      src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_180625990bf%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_180625990bf%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                      alt="Card image cap"
-                    ></img>
-                    <Card.Title>
-                      <GoMarkGithub></GoMarkGithub> Cousera Kurs
-                    </Card.Title>
-                    <Card.Text>
-                      <p>
-                        GitHub is a web-based hosting service for version
-                        control using Git. It is mostly used for open source
-                        projects.
-                        <a
+              <a style={{"textDecoration": "none"}} 
                           href={
                             "https://de.coursera.org/search?query=" + language
                           }
                         >
-                          osapjd>
-                        </a>
-                      </p>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card" style={{ marginTop: "1vw" }}>
                 <Card>
                   <Card.Body>
                     <img
                       class="card-img-top"
-                      src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_180625990bf%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_180625990bf%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                      src="https://images.pexels.com/photos/247791/pexels-photo-247791.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                       alt="Card image cap"
                     ></img>
                     <Card.Title>
-                      <GoMarkGithub></GoMarkGithub> Udemy Kurs
+                      <br></br>
+                       Cousera Courses
                     </Card.Title>
                     <Card.Text>
                       <p>
-                        GitHub is a web-based hosting service for version
-                        control using Git. It is mostly used for open source
-                        projects.
+                        Check out the great courses on cousera.com. Many of them in the language you are interested in. 
+                        
+                          
+                      
                       </p>
                     </Card.Text>
                   </Card.Body>
                 </Card>
+                </a>
+              </div>
+            </div>
+            
+            <div class="col-sm-6">
+              <div class="card" style={{ marginTop: "1vw" }}>
+              <a style={{"textDecoration": "none"}} 
+                          href={
+                            "https://www.udemy.com/courses/search/?src=ukw&q=" + language
+                          }
+                        >
+                <Card>
+                  <Card.Body>
+                    <img
+                      class="card-img-top"
+                      src="https://images.pexels.com/photos/247791/pexels-photo-247791.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                      alt="Card image cap"
+                    ></img>
+                    <Card.Title>
+                      <br></br>
+                       Udemy Courses
+                    </Card.Title>
+                    <Card.Text>
+                      <p>
+                        Check out the great courses on Udemy.com. Many of them in the language you are interested in. 
+                        
+                          
+                      
+                      </p>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+                </a>
               </div>
             </div>
           </div>
