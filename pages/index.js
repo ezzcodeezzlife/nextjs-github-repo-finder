@@ -148,7 +148,6 @@ const Home = () => {
                   <Card.Body>
                     <Card.Title>{repo.name}</Card.Title>
                     <Card.Text>{repo.description}</Card.Text>
-                    <Card.Text>{repo.language}</Card.Text>
                     <Card.Text>{repo.stargazers_count} ⭐</Card.Text>
 
                     {repo.language ? (
