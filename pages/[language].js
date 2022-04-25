@@ -123,7 +123,7 @@ const Language = () => {
           <div class="jumbotron">
             <h1 class="display-4">Hello, {name}!</h1>
             <p class="lead">
-              We found your reposeto <b>{reponame} </b> and it looks really interesting.
+              We found your repository <b>{reponame} </b> and it looks really interesting.
             </p>
             <p class="lead">Because you like the topic <b>{topic}</b> you should have a look at this:</p>
             <hr class="my-4"></hr>
@@ -147,8 +147,7 @@ const Language = () => {
 
 
 
-
-
+<center>
         {loading ? (
           <p>Loading...</p>
         ) : (
@@ -184,6 +183,7 @@ const Language = () => {
           
           ))
         )}
+</center>
 
 
         <center>
