@@ -22,7 +22,7 @@ const Language = () => {
   const topic = router.query.topic;
   const reponame = router.query.reponame;
 
-  //http://localhost:3000/py?name=asd&topic=pandas&reponame=nogga
+  //http://localhost:3000/py?name=asd&topic=pandas&reponame=nogga    sad
 
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
