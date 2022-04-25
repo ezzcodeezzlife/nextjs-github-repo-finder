@@ -10,6 +10,16 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+    <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-71Y9NTPCQD');
+        `}
+      </Script>
+
     <Script id="Adsense-id" data-ad-client="ca-pub-8251732556629149"
   async strategy="afterInteractive"
   onError={ (e) => { console.error('Script failed to load', e) }}
