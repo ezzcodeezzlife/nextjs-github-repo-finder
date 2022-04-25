@@ -3,6 +3,10 @@ import "bootstrap/dist/css/bootstrap.css"; // Add this line
 import { useState, useEffect } from "react";
 import Script from "next/script";
 
+import ReactGA from "react-ga4";
+ReactGA.initialize("G-71Y9NTPCQD");
+ReactGA.send("pageview");
+
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
@@ -10,15 +14,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-71Y9NTPCQD');
-        `}
-      </Script>
+      
 
       <Script
         id="Adsense-id"
