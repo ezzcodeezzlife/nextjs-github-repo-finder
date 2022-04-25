@@ -118,7 +118,7 @@ const Language = () => {
         </nav>
 
 
-      <div class="container" id="content" style={{paddingTop: "2vh"}}>
+      <div class="container" style={{paddingTop: "2vh"}}>
         {name ? (
           <div class="jumbotron">
             <h1 class="display-4">Hello, {name}!</h1>
@@ -154,7 +154,7 @@ const Language = () => {
         ) : (
           repos.map((repo) => (
             
-            <div class="card" style={{marginTop: "1vw"}}>
+            <div class="card"  id="content" style={{marginTop: "1vw"}}>
             <Card>
               <Card.Body>
                 <Card.Title> {repo.name}</Card.Title>
@@ -213,29 +213,29 @@ const Language = () => {
             2 days ago
           </div>
         </div>
+        </div>
 
-
-        <footer class="bg-light text-center text-lg-start">
+        <footer class="bg-dark text-center text-lg-start" style={{marginTop: "2vh", color:"white"}}>
 
   <div class="container p-4">
    
     <div class="row">
      
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Links</h5>
+        <h5 class="text-uppercase">All languages</h5>
 
         <ul class="list-unstyled mb-0">
           <li>
-            <a href="#!" class="text-dark">Link 1</a>
+            <a href="/Python" style={{color:"white"}}>Python</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 2</a>
+          <a href="/Go" style={{color:"white"}}>Go</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 3</a>
+          <a href="/C++" style={{color:"white"}}>C++</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 4</a>
+          <a href="/Javascript" style={{color:"white"}}>Javascript</a>
           </li>
         </ul>
       </div>
@@ -243,18 +243,18 @@ const Language = () => {
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
         <h5 class="text-uppercase mb-0">Links</h5>
 
-        <ul class="list-unstyled">
+        <ul class="list-unstyled mb-0">
           <li>
-            <a href="#!" class="text-dark">Link 1</a>
+            <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 2</a>
+          <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 3</a>
+          <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 4</a>
+          <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
         </ul>
       </div>
@@ -264,16 +264,16 @@ const Language = () => {
 
         <ul class="list-unstyled mb-0">
           <li>
-            <a href="#!" class="text-dark">Link 1</a>
+            <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 2</a>
+          <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 3</a>
+          <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 4</a>
+          <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
         </ul>
       </div>
@@ -281,18 +281,18 @@ const Language = () => {
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
         <h5 class="text-uppercase mb-0">Links</h5>
 
-        <ul class="list-unstyled">
+        <ul class="list-unstyled mb-0">
           <li>
-            <a href="#!" class="text-dark">Link 1</a>
+            <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 2</a>
+          <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 3</a>
+          <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Link 4</a>
+          <a href="#!" style={{color:"white"}}>Link 1</a>
           </li>
         </ul>
       </div>
@@ -305,12 +305,12 @@ const Language = () => {
 
   <div class="text-center p-3">
     © 2020 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a href="https://mdbootstrap.com/">Repofy.com</a>
   </div>
  
 </footer>
 
-     </div>
+    
     </>
   );
 };
