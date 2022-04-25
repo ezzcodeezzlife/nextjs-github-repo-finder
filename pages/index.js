@@ -125,7 +125,8 @@ const Home = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
                 <p class="lead">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
                 <hr class="my-4"></hr>
 
@@ -181,15 +182,13 @@ const Home = () => {
 
                     <Link href={repo.html_url}>
                       <Button variant="primary">
-                        <GoMarkGithub />
-                                  {" "} Github
+                        <GoMarkGithub /> Github
                       </Button>
                     </Link>
 
                     <Link href={repo.homepage}>
                       <Button variant="secondary" style={{ marginLeft: "5px" }}>
-                        <GoGlobe />
-                        {" "} Website
+                        <GoGlobe /> Website
                       </Button>
                     </Link>
                   </Card.Body>
@@ -199,20 +198,45 @@ const Home = () => {
           </div>
         </div>
       )}
-
-      <div class="container" style={{ paddingTop: "2vh" }}>
-        <div class="card text-center" style={{ marginTop: "2vh" }}>
-          <div class="card-header">Featured</div>
-          <a href={"https://de.coursera.org/"}>
-            <div class="card-body">
-              <h5 class="card-title">Check out these courses </h5>
-
-              <a class="btn btn-primary">Go somewhere</a>
+      <>
+        {/* Create two responsice cards next to each other */}
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <Card>
+                <Card.Img variant="top" src="https://i.imgur.com/XqQXZ8l.jpg" />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </Card.Text>
+                  <Card.Text>
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </div>
-          </a>
-          <div class="card-footer text-muted">2 days ago</div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <Card>
+                <Card.Img variant="top" src="https://i.imgur.com/XqQXZ8l.jpg" />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </Card.Text>
+                  <Card.Text>
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
         </div>
-      </div>
+      </>
 
       <footer
         class="bg-dark text-center text-lg-start"
