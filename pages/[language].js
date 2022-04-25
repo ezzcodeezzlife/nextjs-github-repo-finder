@@ -255,7 +255,7 @@ const Language = () => {
           <center>
             <div style={{ paddingTop: "2vh" }}>
               <form action={"/" + language}>
-                <button className="btn btn-outline-primary" type="submit">
+                <button className="btn btn-primary" type="submit">
                   See more {language} projects
                 </button>
               </form>
