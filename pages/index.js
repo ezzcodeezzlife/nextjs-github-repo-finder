@@ -200,17 +200,20 @@ const Home = () => {
       )}
       <>
         {/* Create responsice 2 x 2 grid */}
-        <div class="container" style={{marginTop:"20px"}}>
-          <div class="row" >
+        <div class="container" style={{ marginTop: "20px" }}>
+          <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3">
               <Card>
-                <Card.Img variant="top" src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg" />
+                <Card.Img
+                  variant="top"
+                  src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
+                />
                 <Card.Body>
                   <Card.Title>Card title</Card.Title>
                   <Card.Text>
-                    This is a wider card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
                   </Card.Text>
                   <Card.Text>
                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -221,31 +224,16 @@ const Home = () => {
 
             <div class="col-sm-6 col-md-4 col-lg-3">
               <Card>
-                <Card.Img variant="top" src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg" />
+                <Card.Img
+                  variant="top"
+                  src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
+                />
                 <Card.Body>
                   <Card.Title>Card title</Card.Title>
                   <Card.Text>
-                    This is a wider card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </Card.Text>
-                  <Card.Text>
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-              <Card>
-                <Card.Img variant="top" src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg" />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                    This is a wider card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
                   </Card.Text>
                   <Card.Text>
                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -256,13 +244,36 @@ const Home = () => {
 
             <div class="col-sm-6 col-md-4 col-lg-3">
               <Card>
-                <Card.Img variant="top" src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg" />
+                <Card.Img
+                  variant="top"
+                  src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
+                />
                 <Card.Body>
                   <Card.Title>Card title</Card.Title>
                   <Card.Text>
-                    This is a wider card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </Card.Text>
+                  <Card.Text>
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <Card>
+                <Card.Img
+                  variant="top"
+                  src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
+                />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
                   </Card.Text>
                   <Card.Text>
                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -272,7 +283,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
       </>
 
       <footer
@@ -327,7 +337,6 @@ const Home = () => {
                     Rust
                   </a>
                 </li>
-               
               </ul>
             </div>
 
@@ -359,7 +368,7 @@ const Home = () => {
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Courses:</h5>
+              <h5 class="text-uppercase mb-0">Courses</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
@@ -388,8 +397,8 @@ const Home = () => {
         </div>
 
         <div class="text-center p-3">
-          © 2020 Copyright:
-          <a href="https://mdbootstrap.com/">Repofy.com</a>
+          © 2022 Copyright:
+          <a href="/"> Repofy</a>
         </div>
       </footer>
     </>

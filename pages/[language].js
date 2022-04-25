@@ -32,7 +32,7 @@ const Language = () => {
       fetch(
         "https://api.github.com/search/repositories?q=" +
           String(language) +
-          "&sort=stars&order=desc&per_page=5" /// + topic
+          "&sort=stars&order=desc&per_page=8" /// + topic
       )
         .then((response) => {
           return response.json();
@@ -47,7 +47,7 @@ const Language = () => {
           String(language) +
           " " +
           String(topic) +
-          "&sort=stars&order=desc&per_page=5" /// + topic
+          "&sort=stars&order=desc&per_page=8" /// + topic
       )
         .then((response) => {
           return response.json();
@@ -161,43 +161,75 @@ const Language = () => {
             </p>
           </div>
         ) : (
-          <h2> {language} </h2>
+          <>
+            <h2>
+              {" "}
+              {language} {topic}{" "}
+            </h2>
+            <h5> You may like these repos:</h5>
+          </>
         )}
 
-        <center>
-          {loading ? (
-            <p>Loading...</p>
-          ) : (
-            repos.map((repo) => (
-              <div class="card" id="content" style={{ marginTop: "1vw" }}>
-                <Card>
-                  <Card.Body>
-                    <Card.Title> {repo.name}</Card.Title>
-                    <Card.Text>{repo.description}</Card.Text>
-                    <Button
-                      id="homepagebutton"
-                      href={repo.html_url}
-                      variant="primary"
-                    >
-                      <GoMarkGithub></GoMarkGithub> GitHub
-                    </Button>{" "}
-                    <Button
-                      id="homepagebutton"
-                      href={repo.homepage}
-                      variant="secondary"
-                    >
-                      <GoGlobe></GoGlobe> Homepage
-                    </Button>
-                  </Card.Body>
-                  <Card.Header>
-                    <Badge bg="secondary"> ⭐ {repo.stargazers_count}</Badge> ▪️{" "}
-                    <Badge bg="info">{repo.language}</Badge>
-                  </Card.Header>
-                </Card>
-              </div>
-            ))
-          )}
-        </center>
+        {loading ? (
+          <Spinner animation="border" variant="primary" />
+        ) : (
+          //create a resposive grid with bootstrap cards for each repo in the array of repos from the api call
+          <div class="container">
+            <div class="row">
+              {repos.map((repo) => (
+                <div
+                  class="col-sm-6 col-md-4 col-lg-3"
+                  style={{ marginTop: "20px" }}
+                >
+                  <Card>
+                    <Card.Img variant="top" src={repo.owner.avatar_url} />
+                    <Card.Body>
+                      <Card.Title>{repo.name}</Card.Title>
+                      <Card.Text>{repo.description}</Card.Text>
+                      <Card.Text>{repo.stargazers_count} ⭐</Card.Text>
+
+                      {repo.language ? (
+                        <>
+                          <a href={"/" + repo.language}>
+                            <button
+                              className="btn btn-outline-primary"
+                              type="submit"
+                            >
+                              more {repo.language} projects
+                            </button>
+                          </a>
+                          <br></br>
+                          <br></br>
+                        </>
+                      ) : (
+                        <></>
+                      )}
+
+                      <Link href={repo.html_url}>
+                        <Button variant="primary">
+                          <GoMarkGithub /> Github
+                        </Button>
+                      </Link>
+
+                      {repo.homepage ? (
+                        <Link href={repo.homepage}>
+                          <Button
+                            variant="secondary"
+                            style={{ marginLeft: "5px" }}
+                          >
+                            <GoGlobe /> Website
+                          </Button>
+                        </Link>
+                      ) : (
+                        <></>
+                      )}
+                    </Card.Body>
+                  </Card>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {name ? (
           <center>
@@ -213,26 +245,64 @@ const Language = () => {
           <></>
         )}
 
-        <div class="card text-center" style={{ marginTop: "2vh" }}>
-          <div class="card-header">Featured</div>
-          <a href={"https://de.coursera.org/search?query=" + language}>
-            <div class="card-body">
-              <h5 class="card-title">
-                Check out these courses for: {language}{" "}
-              </h5>
-              {topic ? (
-                <p class="card-text">Many of them cover the topic "{topic}"!</p>
-              ) : (
-                <p class="card-text">
-                  Many of them cover the topics you would like!
-                </p>
-              )}
-
-              <a class="btn btn-primary">Go somewhere</a>
+        <>
+          {/* create two cards which to gether span full width*/}
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card" style={{ marginTop: "1vw" }}>
+                <Card>
+                  <Card.Body>
+                    <img
+                      class="card-img-top"
+                      src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_180625990bf%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_180625990bf%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                      alt="Card image cap"
+                    ></img>
+                    <Card.Title>
+                      <GoMarkGithub></GoMarkGithub> Cousera Kurs
+                    </Card.Title>
+                    <Card.Text>
+                      <p>
+                        GitHub is a web-based hosting service for version
+                        control using Git. It is mostly used for open source
+                        projects.
+                        <a
+                          href={
+                            "https://de.coursera.org/search?query=" + language
+                          }
+                        >
+                          osapjd>
+                        </a>
+                      </p>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </div>
             </div>
-          </a>
-          <div class="card-footer text-muted">2 days ago</div>
-        </div>
+            <div class="col-sm-6">
+              <div class="card" style={{ marginTop: "1vw" }}>
+                <Card>
+                  <Card.Body>
+                    <img
+                      class="card-img-top"
+                      src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_180625990bf%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_180625990bf%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                      alt="Card image cap"
+                    ></img>
+                    <Card.Title>
+                      <GoMarkGithub></GoMarkGithub> Udemy Kurs
+                    </Card.Title>
+                    <Card.Text>
+                      <p>
+                        GitHub is a web-based hosting service for version
+                        control using Git. It is mostly used for open source
+                        projects.
+                      </p>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </>
       </div>
 
       <footer
@@ -269,81 +339,76 @@ const Language = () => {
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Links</h5>
+              <h5 class="text-uppercase mb-0">&nbsp;</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/Php" style={{ color: "white" }}>
+                    Php
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/Java" style={{ color: "white" }}>
+                    Java
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/Rust" style={{ color: "white" }}>
+                    Rust
                   </a>
                 </li>
               </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
+              <h5 class="text-uppercase">Topics</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/javascript?topic=npm" style={{ color: "white" }}>
+                    npm
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/python?topic=pandas" style={{ color: "white" }}>
+                    pandas
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/javascript?topic=react" style={{ color: "white" }}>
+                    React
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/javascript?topic=node" style={{ color: "white" }}>
+                    node
                   </a>
                 </li>
               </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Links</h5>
+              <h5 class="text-uppercase mb-0">Courses</h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/Python" style={{ color: "white" }}>
+                    Python
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/javascript" style={{ color: "white" }}>
+                    javascript
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/go" style={{ color: "white" }}>
+                    Go
                   </a>
                 </li>
                 <li>
-                  <a href="#!" style={{ color: "white" }}>
-                    Link 1
+                  <a href="/rust" style={{ color: "white" }}>
+                    Rust
                   </a>
                 </li>
               </ul>
@@ -352,12 +417,13 @@ const Language = () => {
         </div>
 
         <div class="text-center p-3">
-          © 2020 Copyright:
-          <a href="https://mdbootstrap.com/">Repofy.com</a>
+          © 2022 Copyright:
+          <a href="/"> Repofy</a>
         </div>
       </footer>
     </>
   );
 };
+
 
 export default Language;
