@@ -95,7 +95,7 @@ const Language = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  All anguages
+                  All languages
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown01">
                   <li>
@@ -433,7 +433,6 @@ const Language = () => {
                     api
                   </a>
                 </li>
-                
               </ul>
             </div>
           </div>

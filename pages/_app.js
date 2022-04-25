@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-    <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
@@ -20,13 +20,18 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
 
-    <Script id="Adsense-id" data-ad-client="ca-pub-8251732556629149"
-  async strategy="afterInteractive"
-  onError={ (e) => { console.error('Script failed to load', e) }}
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-/>
-    
-  <Component {...pageProps} />
+      <Script
+        id="Adsense-id"
+        data-ad-client="ca-pub-8251732556629149"
+        async
+        strategy="afterInteractive"
+        onError={(e) => {
+          console.error("Script failed to load", e);
+        }}
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
+
+      <Component {...pageProps} />
     </>
   );
 }

@@ -120,12 +120,15 @@ const Home = () => {
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
               <div class="jumbotron">
-                <br>
-                </br>
+                <br></br>
                 <br></br>
                 <h1 class="display-4">Welcome to Appsplosion!</h1>
                 <p class="lead">
-                We at Appsplosion care about quality education. Not every school and university can teach in a way that is both fun and engaging.<br></br> Fortunately here you can find hundreds of Courses, Consultants and Products to help you learn about your favorite topics in an unforgettable way!
+                  We at Appsplosion care about quality education. Not every
+                  school and university can teach in a way that is both fun and
+                  engaging.<br></br> Fortunately here you can find hundreds of
+                  Courses, Consultants and Products to help you learn about your
+                  favorite topics in an unforgettable way!
                 </p>
                 <hr class="my-4"></hr>
 
@@ -211,9 +214,12 @@ const Home = () => {
                 <Card.Body>
                   <Card.Title>Advanced Python Programming - 2022</Card.Title>
                   <Card.Text>
-                    Improve your Python programming skills and solve over 100 advanced Python problems!
+                    Improve your Python programming skills and solve over 100
+                    advanced Python problems!
                   </Card.Text>
-                  <Link href="https://www.udemy.com/course/advanced-exercises-python-programming/">View more</Link>
+                  <Link href="https://www.udemy.com/course/advanced-exercises-python-programming/">
+                    View more
+                  </Link>
                   <Card.Text>
                     <small class="text-muted">4/2022</small>
                   </Card.Text>
@@ -230,13 +236,16 @@ const Home = () => {
                 <Card.Body>
                   <Card.Title>Advanced C Programming Course</Card.Title>
                   <Card.Text>
-                  Become a True Master of the C Programming Language - Confidently Apply for Real Time or Embedded C Jobs or contracts!
+                    Become a True Master of the C Programming Language -
+                    Confidently Apply for Real Time or Embedded C Jobs or
+                    contracts!
                   </Card.Text>
-                  <Link href="https://www.udemy.com/course/advanced-c-programming-course/">View more</Link>
+                  <Link href="https://www.udemy.com/course/advanced-c-programming-course/">
+                    View more
+                  </Link>
                   <Card.Text>
                     <small class="text-muted">8/2021</small>
                   </Card.Text>
-
                 </Card.Body>
               </Card>
             </div>
@@ -248,12 +257,15 @@ const Home = () => {
                   src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
                 />
                 <Card.Body>
-                  <Card.Title>Deep Learning Specialization
-</Card.Title>
+                  <Card.Title>Deep Learning Specialization</Card.Title>
                   <Card.Text>
-                  Become a Machine Learning expert. Master the fundamentals of deep learning and break into AI. Recently updated with cutting-edge techniques!
+                    Become a Machine Learning expert. Master the fundamentals of
+                    deep learning and break into AI. Recently updated with
+                    cutting-edge techniques!
                   </Card.Text>
-                  <Link href="https://www.coursera.org/professional-certificates/tensorflow-in-practice">View more</Link>
+                  <Link href="https://www.coursera.org/professional-certificates/tensorflow-in-practice">
+                    View more
+                  </Link>
                   <Card.Text>
                     <small class="text-muted">3/2022</small>
                   </Card.Text>
@@ -268,11 +280,18 @@ const Home = () => {
                   src="https://miro.medium.com/max/750/1*We_yPZdShpUY2jRcSKn5sg.jpeg"
                 />
                 <Card.Body>
-                  <Card.Title>DeepLearning.AI TensorFlow Developer Professional Certificate</Card.Title>
+                  <Card.Title>
+                    DeepLearning.AI TensorFlow Developer Professional
+                    Certificate
+                  </Card.Title>
                   <Card.Text>
-                  Best practices for TensorFlow, a popular open-source machine learning framework to train a neural network for a computer vision applications.
+                    Best practices for TensorFlow, a popular open-source machine
+                    learning framework to train a neural network for a computer
+                    vision applications.
                   </Card.Text>
-                  <Link href="https://www.coursera.org/specializations/deep-learning">View more</Link>
+                  <Link href="https://www.coursera.org/specializations/deep-learning">
+                    View more
+                  </Link>
                   <Card.Text>
                     <small class="text-muted">3/2022</small>
                   </Card.Text>
@@ -384,7 +403,6 @@ const Home = () => {
                     api
                   </a>
                 </li>
-                
               </ul>
             </div>
           </div>
