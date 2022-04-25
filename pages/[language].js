@@ -71,7 +71,7 @@ const Language = () => {
       <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
-            Repofy
+            Appsplosion
           </a>
           <button
             class="navbar-toggler"
@@ -441,7 +441,7 @@ const Language = () => {
 
         <div class="text-center p-3">
           © 2022 Copyright:
-          <a href="/"> Repofy</a>
+          <a href="/"> Appsplosion</a>
         </div>
       </footer>
     </>

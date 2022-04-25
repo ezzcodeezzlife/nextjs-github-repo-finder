@@ -40,7 +40,7 @@ const Home = () => {
       <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
-            Repofy
+            Appsplosion
           </a>
           <button
             class="navbar-toggler"
@@ -123,9 +123,9 @@ const Home = () => {
                 <br>
                 </br>
                 <br></br>
-                <h1 class="display-4">Welcome to Repofy!</h1>
+                <h1 class="display-4">Welcome to Appsplosion!</h1>
                 <p class="lead">
-                We at Repofy care about quality education. Not every school and university can teach in a way that is both fun and engaging.<br></br> Fortunately here you can find hundreds of Courses, Consultants and Products to help you learn about your favorite topics in an unforgettable way!
+                We at Appsplosion care about quality education. Not every school and university can teach in a way that is both fun and engaging.<br></br> Fortunately here you can find hundreds of Courses, Consultants and Products to help you learn about your favorite topics in an unforgettable way!
                 </p>
                 <hr class="my-4"></hr>
 
@@ -392,7 +392,7 @@ const Home = () => {
 
         <div class="text-center p-3">
           © 2022 Copyright:
-          <a href="/"> Repofy</a>
+          <a href="/"> Appsplosion</a>
         </div>
       </footer>
     </>
