@@ -36,7 +36,6 @@ const Home = () => {
   }, []);
 
   return (
-
     <>
       <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
         <div class="container-fluid">
@@ -96,14 +95,38 @@ const Home = () => {
         </div>
       </nav>
 
+      <div
+        class="p-5 text-center bg-image rounded-3"
+        style={{
+          backgroundImage: `URL('https://i.pinimg.com/originals/b7/4b/fb/b74bfb590ea735f8c3ec9b64f8309273.jpg')`,
+          height: "400px",
+        }}
+      >
+        <div class="mask">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <br></br>
+              <h1 class="mb-3">Heading</h1>
+              <h4 class="mb-3">Subheading</h4>
+              <a class="btn btn-light btn-lg" href="#!" role="button">
+                Call to action
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {loading ? (
         <Spinner animation="border" variant="primary" />
       ) : (
-       //create a resposive grid with bootstrap cards for each repo in the array of repos from the api call
+        //create a resposive grid with bootstrap cards for each repo in the array of repos from the api call
         <div class="container">
           <div class="row">
             {repos.map((repo) => (
-              <div class="col-sm-6 col-md-4 col-lg-3" style={{ marginTop: "20px" }}>
+              <div
+                class="col-sm-6 col-md-4 col-lg-3"
+                style={{ marginTop: "20px" }}
+              >
                 <Card>
                   <Card.Img variant="top" src={repo.owner.avatar_url} />
                   <Card.Body>
@@ -111,24 +134,37 @@ const Home = () => {
                     <Card.Text>{repo.description}</Card.Text>
                     <Card.Text>{repo.language}</Card.Text>
                     <Card.Text>{repo.stargazers_count} ⭐</Card.Text>
-                    
-                    
+
+                    {repo.language ? (
+                      <>
+                        <a href={"/" + repo.language}>
+                          <button
+                            className="btn btn-outline-primary"
+                            type="submit"
+                          >
+                            more {repo.language} projects
+                          </button>
+                        </a>
+                        <br></br>
+                        <br></br>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+
                     <Link href={repo.html_url}>
                       <Button variant="primary">
                         <GoMarkGithub />
-                         Github
+                        Github
                       </Button>
                     </Link>
-                    
+
                     <Link href={repo.homepage}>
                       <Button variant="secondary" style={{ marginLeft: "5px" }}>
                         <GoGlobe />
                         Website
                       </Button>
                     </Link>
-                    
-
-
                   </Card.Body>
                 </Card>
               </div>
@@ -136,7 +172,6 @@ const Home = () => {
           </div>
         </div>
       )}
-
 
       <div class="container" style={{ paddingTop: "2vh" }}>
         <div class="card text-center" style={{ marginTop: "2vh" }}>
