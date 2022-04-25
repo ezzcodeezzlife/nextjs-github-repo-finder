@@ -283,7 +283,7 @@ const Language = () => {
                       ></img>
                       <Card.Title>
                         <br></br>
-                        Cousera Courses
+                        Cousera Courses - {language}
                       </Card.Title>
                       <Card.Text>
                         <p>
@@ -315,7 +315,7 @@ const Language = () => {
                       ></img>
                       <Card.Title>
                         <br></br>
-                        Udemy Courses
+                        Udemy Courses - {language}
                       </Card.Title>
                       <Card.Text>
                         <p>
