@@ -16,9 +16,9 @@ import {
 } from "react-bootstrap";
 import Head from 'next/head'
 
-const Home = () => {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
+const Home = ({ data }) => {
+  const repos = data.items;
+  
 
   const [search, setSearch] = useState("");
 
@@ -28,22 +28,9 @@ const Home = () => {
     router.push(page);
   };
 
-  const fetchData = () => {
-    fetch(
-      "https://api.github.com/search/repositories?q=stars:>1&sort=stars&order=desc&per_page=8"
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((repos) => {
-        setRepos(repos.items);
-        setLoading(false);
-      });
-  };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+
+
 
   return (
     <>
@@ -164,10 +151,9 @@ const Home = () => {
       </div>
 
       <div id="content"></div>
-      {loading ? (
-        <Spinner animation="border" variant="primary" />
-      ) : (
-        //create a resposive grid with bootstrap cards for each repo in the array of repos from the api call
+      
+      
+       
         <div class="container">
           <div class="row">
             {repos.map((repo) => (
@@ -216,7 +202,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      )}
+     
       <>
         {/* Create responsice 2 x 2 grid */}
         <div class="container" style={{ marginTop: "20px" }}>
@@ -468,4 +454,13 @@ const Home = () => {
   );
 };
 
+export async function getServerSideProps(context) {
+
+  const res = await fetch("https://api.github.com/search/repositories?q=stars:>1&sort=stars&order=desc&per_page=8")
+  const data = await res.json()
+
+  return {
+    props: { data }, // will be passed to the page component as props
+  }
+}
 export default Home;
