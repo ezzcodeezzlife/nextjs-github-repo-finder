@@ -14,7 +14,7 @@ import {
   Jumbotron,
   Form,
 } from "react-bootstrap";
-
+import Head from 'next/head'
 
 const Home = () => {
   const [repos, setRepos] = useState([]);
@@ -47,6 +47,12 @@ const Home = () => {
 
   return (
     <>
+
+<Head>
+        <title>Home - Appsplosion</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
@@ -312,49 +318,40 @@ const Home = () => {
         </div>
       </>
 
-  {/* create a repsonsive search bar tahts full with in container */}
-  <>
-      <div class="container" style={{ marginTop: "20px" }}>
-        <div >
+      {/* create a repsonsive search bar tahts full with in container */}
+      <>
+        <div class="container" style={{ marginTop: "20px" }}>
           <div>
-            <Card>
-              
-              <Card.Body>
-              <Card.Title>Search:</Card.Title>
-              <center>
-                <Card.Title>
-                  <Form inline >
-                    
-                    <Form.Control
-                      type="text"
-                      placeholder="Search for Language, Topic, Project ..."
-                      className="mr-sm-2"
-                      onChange={(e) => setSearch(e.target.value)}
-                    />
-                   
-                    <Button style={{ marginTop: "20px" }}
-                      variant="outline-primary"
-                      onClick={() => redirectToPage(search)}
-                    >
-                      Search
-                    </Button>
-                  </Form>
-                </Card.Title>
-                </center>
-              </Card.Body>
-            </Card>
+            <div>
+              <Card>
+                <Card.Body>
+                  <Card.Title>Search:</Card.Title>
+                  <center>
+                    <Card.Title>
+                      <Form inline>
+                        <Form.Control
+                          type="text"
+                          placeholder="Search for Language, Topic, Project ..."
+                          className="mr-sm-2"
+                          onChange={(e) => setSearch(e.target.value)}
+                        />
+
+                        <Button
+                          style={{ marginTop: "20px" }}
+                          variant="outline-primary"
+                          onClick={() => redirectToPage(search)}
+                        >
+                          Search
+                        </Button>
+                      </Form>
+                    </Card.Title>
+                  </center>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
         </div>
-      </div>
-    </>
-
-
-
-
-
-
-
-
+      </>
 
       <footer
         class="bg-dark text-center text-lg-start"

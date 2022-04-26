@@ -14,10 +14,8 @@ import {
   Jumbotron,
   Form,
 } from "react-bootstrap";
+import Head from 'next/head'
 
-
-
-  
 const Language = () => {
   const router = useRouter();
   //const [language, setLanguage] = useState(router.query.language)
@@ -76,7 +74,17 @@ const Language = () => {
   }, [language]);
 
   return (
+   
+   
+
     <>
+     <div>
+      <Head>
+        <title>{language} - Appsplosion</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+    </div>
+
       <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">

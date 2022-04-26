@@ -14,8 +14,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      
-
       <Script
         id="Adsense-id"
         data-ad-client="ca-pub-8251732556629149"
