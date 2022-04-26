@@ -12,11 +12,21 @@ import {
   Spinner,
   Badge,
   Jumbotron,
+  Form,
 } from "react-bootstrap";
+
 
 const Home = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const [search, setSearch] = useState("");
+
+  const router = useRouter();
+
+  const redirectToPage = (page) => {
+    router.push(page);
+  };
 
   const fetchData = () => {
     fetch(
@@ -301,6 +311,50 @@ const Home = () => {
           </div>
         </div>
       </>
+
+  {/* create a repsonsive search bar tahts full with in container */}
+  <>
+      <div class="container" style={{ marginTop: "20px" }}>
+        <div >
+          <div>
+            <Card>
+              
+              <Card.Body>
+              <Card.Title>Search:</Card.Title>
+              <center>
+                <Card.Title>
+                  <Form inline >
+                    
+                    <Form.Control
+                      type="text"
+                      placeholder="Search for Language, Topic, Project ..."
+                      className="mr-sm-2"
+                      onChange={(e) => setSearch(e.target.value)}
+                    />
+                   
+                    <Button style={{ marginTop: "20px" }}
+                      variant="outline-primary"
+                      onClick={() => redirectToPage(search)}
+                    >
+                      Search
+                    </Button>
+                  </Form>
+                </Card.Title>
+                </center>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </>
+
+
+
+
+
+
+
+
 
       <footer
         class="bg-dark text-center text-lg-start"
