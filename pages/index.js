@@ -456,7 +456,7 @@ const Home = ({ data }) => {
 
 export async function getServerSideProps(context) {
 
-  const res = await fetch("https://api.github.com/search/repositories?q=stars:>1&sort=stars&order=desc&per_page=8")
+  const res = await fetch("https://api.github.com/search/repositories?q=stars:>1&sort=stars&order=desc&per_page=16")
   const data = await res.json()
 
   return {

@@ -39,7 +39,7 @@ const Language = () => {
       fetch(
         "https://api.github.com/search/repositories?q=" +
           String(language) +
-          "&sort=stars&order=desc&per_page=8" /// + topic
+          "&sort=stars&order=desc&per_page=24" /// + topic
       )
         .then((response) => {
           return response.json();
@@ -54,7 +54,7 @@ const Language = () => {
           String(language) +
           " " +
           String(topic) +
-          "&sort=stars&order=desc&per_page=8" /// + topic
+          "&sort=stars&order=desc&per_page=16" /// + topic
       )
         .then((response) => {
           return response.json();
