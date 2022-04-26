@@ -251,6 +251,7 @@ const Language = () => {
           </div>
         )}
 
+<>
         {name ? (
           <center>
             <div style={{ paddingTop: "2vh" }}>
@@ -264,6 +265,21 @@ const Language = () => {
         ) : (
           <></>
         )}
+
+{topic ? (
+          <center>
+            <div style={{ paddingTop: "2vh" }}>
+              <form action={"/" + language}>
+                <button className="btn btn-primary" type="submit">
+                  See more {language} projects
+                </button>
+              </form>
+            </div>
+          </center>
+        ) : (
+          <></>
+        )}
+        </>
 
         <>
           {/* create two cards which to gether span full width*/}
