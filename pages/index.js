@@ -446,8 +446,8 @@ const Home = ({ data }) => {
         </div>
 
         <div class="text-center p-3">
-          © 2022 Copyright:
-          <a href="/"> Appsplosion</a>
+          © 2022 Copyright Appsplosion 
+          <a href="https://homepage-appsplosion.herokuapp.com/privacypolicy">Privacy Policy</a>
         </div>
       </footer>
     </>
