@@ -204,6 +204,63 @@ const Home = ({ data }) => {
         </div>
      
       <>
+              {/* Create responsice 2 x 2 grid with card with no images 
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <Card>
+                      <Card.Body>
+                        <Card.Title>Javascript</Card.Title>
+                        <Card.Text>
+                          Check out Javascript projects!
+                        </Card.Text>
+                        <Button variant="primary">
+                          Check it out
+                        </Button>
+
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <Card>
+                      <Card.Body>
+                        <Card.Title>C++</Card.Title>
+                        <Card.Text>
+                          Check out C++ projects!
+                        </Card.Text>
+                        <Button variant="primary">
+                          Check it out
+                        </Button>
+
+                      </Card.Body>
+                    </Card>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <Card>
+                      <Card.Body>
+                        <Card.Title>Rust</Card.Title>
+                        <Card.Text>
+                          Check out Rust projects!
+                        </Card.Text>
+                        <Button variant="primary">
+                          Check it out
+                        </Button>
+
+                      </Card.Body>
+                    </Card>
+                  </div>
+
+                 
+                </div>
+              </div>
+              */}
+
+      </>
+
+
+
+      <>
         {/* Create responsice 2 x 2 grid */}
         <div class="container" style={{ marginTop: "20px" }}>
           <div class="row">
